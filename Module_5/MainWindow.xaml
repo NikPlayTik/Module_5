@@ -9,7 +9,7 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="путь_к_изображению.jpg" />
+            <ImageBrush ImageSource="/Исходные изображения/Фон.png" />
         </Grid.Background>
     </Grid>
 </Window>
