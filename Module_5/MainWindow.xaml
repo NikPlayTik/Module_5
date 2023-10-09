@@ -8,11 +8,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button Style="{StaticResource MaterialDesignRaisedDarkButton}" Margin="72,352,628,32" Width="100" Height="50" >
-            <Button.Effect>
-                <DropShadowEffect BlurRadius="10" Color="DarkBlue" ShadowDepth="5" RenderingBias="Performance" Opacity="0.7"/>
-            </Button.Effect>
-            <TextBlock FontSize="6" FontFamily="Arial Black">Красная кнопка</TextBlock>
-        </Button>
+        <Grid.Background>
+            <ImageBrush ImageSource="путь_к_изображению.jpg" />
+        </Grid.Background>
     </Grid>
 </Window>
