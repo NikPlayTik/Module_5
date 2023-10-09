@@ -6,10 +6,30 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:Module_5"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Задачник" Height="500" Width="850" SizeToContent="Manual"
+        MinWidth="850" MinHeight="500" MaxWidth="850" MaxHeight="500">
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="/Исходные изображения/Фон.png" />
         </Grid.Background>
+
+        <Button Width="88" Height="88" Margin="356,314,356,32" BorderThickness="0">
+            <Button.Background>
+                <ImageBrush ImageSource="/Исходные изображения/Кнопка-добавление.png" TileMode="None" Stretch="Fill"/>
+            </Button.Background>
+        </Button>
+        <DockPanel Height="350" Margin="10,0,-10,84" RenderTransformOrigin="0.5,0.5">
+            <DockPanel.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </DockPanel.RenderTransform>
+            <DockPanel.Background>
+                <ImageBrush ImageSource="/Исходные изображения/Панель-задач.png" TileMode="None" Stretch="Fill"/>
+            </DockPanel.Background>
+        </DockPanel>
     </Grid>
 </Window>
