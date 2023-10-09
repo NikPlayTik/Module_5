@@ -14,7 +14,7 @@
             </Button.Background>
         </Button>
 
-        <ListBox x:Name="listTasks" Margin="79,102,79,188" FontSize="20" FontFamily="Bahnschrift SemiBold">
+        <ListBox x:Name="listBoxTasks" Margin="79,102,79,188" FontSize="20" FontFamily="Bahnschrift SemiBold">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <DockPanel>
@@ -25,6 +25,6 @@
             </ListBox.ItemTemplate>
         </ListBox>
 
-        <TextBox x:Name="textTask" Margin="79,51,79,382" FontSize="20" FontFamily="Bahnschrift SemiBold"/>
+        <TextBox x:Name="textBoxTask" Margin="79,51,79,382" FontSize="20" FontFamily="Bahnschrift SemiBold"/>
     </Grid>
 </Window>

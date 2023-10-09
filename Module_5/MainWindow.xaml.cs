@@ -27,7 +27,10 @@ namespace Module_5
 
         private void AddTask_Click(object sender, RoutedEventArgs e)
         {
+            // получаем текст из текстового поля и удаляем лишние пробелы
             string task = textTask.Text.Trim();
+
+            // проверка, что текст не пустой
             if (!string.IsNullOrEmpty(task))
             {
                 tasks.Add(task);
@@ -36,6 +39,7 @@ namespace Module_5
         }
         private void RemoveTask_Click(object sender, RoutedEventArgs e)
         {
+            
             if (listTasks.SelectedIndex > -1)
             {
                 tasks.RemoveAt(listTasks.SelectedIndex);
