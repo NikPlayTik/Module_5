@@ -12,14 +12,34 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Collections.ObjectModel;
 
 namespace Module_5
 {
     public partial class MainWindow : Window
     {
+        private ObservableCollection<string> tasks = new ObservableCollection<string>();
         public MainWindow()
         {
             InitializeComponent();
+            listTasks.ItemsSource = tasks;
+        }
+
+        private void AddTask_Click(object sender, RoutedEventArgs e)
+        {
+            string task = textTask.Text.Trim();
+            if (!string.IsNullOrEmpty(task))
+            {
+                tasks.Add(task);
+                textTask.Clear();
+            }
+        }
+        private void RemoveTask_Click(object sender, RoutedEventArgs e)
+        {
+            if (listTasks.SelectedIndex > -1)
+            {
+                tasks.RemoveAt(listTasks.SelectedIndex);
+            }
         }
     }
 }

@@ -13,7 +13,7 @@
             <ImageBrush ImageSource="/Исходные изображения/Фон.png" />
         </Grid.Background>
 
-        <Button Width="88" Height="88" Margin="356,314,356,32" BorderThickness="0">
+        <Button Width="88" Height="88" Margin="356,314,356,32" BorderThickness="0" Click="AddTask_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/Исходные изображения/Кнопка-добавление.png" TileMode="None" Stretch="Fill"/>
             </Button.Background>
@@ -31,5 +31,13 @@
                 <ImageBrush ImageSource="/Исходные изображения/Панель-задач.png" TileMode="None" Stretch="Fill"/>
             </DockPanel.Background>
         </DockPanel>
+        <Button Click="RemoveTask_Click" Margin="727,111,88,341" BorderThickness="0">
+            <Button.Background>
+                <ImageBrush ImageSource="/Исходные изображения/Кнопка-закрытия.png"/>
+            </Button.Background>
+        </Button>
+        <ListBox x:Name="listTasks" Margin="79,102,79,188" FontSize="20" FontFamily="Bahnschrift SemiBold"/>
+        <TextBox x:Name="textTask" Margin="79,51,79,382" FontSize="20" FontFamily="Bahnschrift SemiBold"/>
+
     </Grid>
 </Window>
