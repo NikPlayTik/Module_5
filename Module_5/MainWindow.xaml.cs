@@ -36,7 +36,7 @@ namespace Module_5
             // проверка, что текст не пустой
             if (!string.IsNullOrEmpty(task))
             {
-                tasks.Add(task + "\t" + currentTime);
+                tasks.Add(task + "\t " + currentTime);
                 textBoxTask.Clear();
             }
         }
