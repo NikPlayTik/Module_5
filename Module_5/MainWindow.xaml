@@ -1,11 +1,6 @@
 ﻿<Window x:Class="Module_5.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        xmlns:local="clr-namespace:Module_5"
-        mc:Ignorable="d"
         Title="Задачник" Height="500" Width="850" SizeToContent="Manual"
         MinWidth="850" MinHeight="500" MaxWidth="850" MaxHeight="500">
     <Grid>
@@ -18,26 +13,18 @@
                 <ImageBrush ImageSource="/Исходные изображения/Кнопка-добавление.png" TileMode="None" Stretch="Fill"/>
             </Button.Background>
         </Button>
-        <DockPanel Height="350" Margin="10,0,-10,84" RenderTransformOrigin="0.5,0.5">
-            <DockPanel.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </DockPanel.RenderTransform>
-            <DockPanel.Background>
-                <ImageBrush ImageSource="/Исходные изображения/Панель-задач.png" TileMode="None" Stretch="Fill"/>
-            </DockPanel.Background>
-        </DockPanel>
-        <Button Click="RemoveTask_Click" Margin="727,111,88,341" BorderThickness="0">
-            <Button.Background>
-                <ImageBrush ImageSource="/Исходные изображения/Кнопка-закрытия.png"/>
-            </Button.Background>
-        </Button>
-        <ListBox x:Name="listTasks" Margin="79,102,79,188" FontSize="20" FontFamily="Bahnschrift SemiBold"/>
-        <TextBox x:Name="textTask" Margin="79,51,79,382" FontSize="20" FontFamily="Bahnschrift SemiBold"/>
 
+        <ListBox x:Name="listTasks" Margin="79,102,79,188" FontSize="20" FontFamily="Bahnschrift SemiBold">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <DockPanel>
+                        <TextBlock Text="{Binding}" VerticalAlignment="Center" />
+                        <Image Source="/Исходные изображения/Кнопка-закрытия.png" Width="20" Height="20" MouseDown="RemoveTask_Click" Tag="{Binding RelativeSource={RelativeSource Self}}" Margin="600,0,0,0" Cursor="Hand"/>
+                    </DockPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <TextBox x:Name="textTask" Margin="79,51,79,382" FontSize="20" FontFamily="Bahnschrift SemiBold"/>
     </Grid>
 </Window>
