@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Collections.ObjectModel;
+using System.Data;
 
 namespace Module_5
 {
@@ -27,13 +28,15 @@ namespace Module_5
 
         private void AddTask_Click(object sender, RoutedEventArgs e)
         {
+            DateTime currentTime = DateTime.Now;
+
             // получаем текст из текстового поля и удаляем лишние пробелы
             string task = textBoxTask.Text.Trim();
 
             // проверка, что текст не пустой
             if (!string.IsNullOrEmpty(task))
             {
-                tasks.Add(task);
+                tasks.Add(task + "\t" + currentTime);
                 textBoxTask.Clear();
             }
         }

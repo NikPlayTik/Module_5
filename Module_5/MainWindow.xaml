@@ -18,13 +18,12 @@
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <DockPanel>
-                        <TextBlock Text="{Binding}" VerticalAlignment="Center" />
-                        <Image Source="/Исходные изображения/Кнопка-закрытия.png" Width="20" Height="20" MouseDown="RemoveTask_Click" Tag="{Binding RelativeSource={RelativeSource Self}}" Margin="600,0,0,0" Cursor="Hand"/>
+                        <TextBlock Text="{Binding}" VerticalAlignment="Center" TextWrapping="Wrap" />
+                        <Image Source="/Исходные изображения/Кнопка-закрытия.png" Width="20" Height="20" MouseDown="RemoveTask_Click" Tag="{Binding RelativeSource={RelativeSource Self}}" Margin="-20, 90,0,0" Cursor="Hand"/>
                     </DockPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-
         <TextBox x:Name="textBoxTask" Margin="79,51,79,382" FontSize="20" FontFamily="Bahnschrift SemiBold"/>
     </Grid>
 </Window>
