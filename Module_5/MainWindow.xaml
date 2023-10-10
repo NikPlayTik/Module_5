@@ -14,7 +14,7 @@
             </Button.Background>
         </Button>
 
-        <ListBox x:Name="listBoxTasks" Margin="79,102,79,188" FontSize="20" FontFamily="Bahnschrift SemiBold">
+        <ListBox x:Name="listBoxTasks" Margin="79,102,79,188" FontSize="20" FontFamily="Bahnschrift SemiBold" MouseDoubleClick="ListBox_MouseDoubleClick">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <DockPanel>

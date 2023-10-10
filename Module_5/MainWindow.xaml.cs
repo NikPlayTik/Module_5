@@ -48,5 +48,32 @@ namespace Module_5
                 tasks.RemoveAt(listBoxTasks.SelectedIndex);
             }
         }
+
+        private void ListBox_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed)
+            {
+                var selectedItem = listBoxTasks.SelectedItem as string;
+
+                if (selectedItem != null)
+                {
+                    // Проверяем, является ли задача уже выполненной
+                    if (!selectedItem.StartsWith("☑️ "))
+                    {
+                        var result = MessageBox.Show("Выполнить задачу?", "Подтверждение", MessageBoxButton.YesNo, MessageBoxImage.Question);
+
+                        if (result == MessageBoxResult.Yes)
+                        {
+                            var index = listBoxTasks.SelectedIndex;
+                            tasks[index] = "☑️ " + selectedItem;
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Эта задача уже выполнена");
+                    }
+                }
+            }
+        }
     }
 }

@@ -116,6 +116,9 @@
     <Resource Include="Исходные изображения\Кнопка-добавление.png" />
     <Resource Include="Исходные изображения\Панель-задач.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Исходные изображения\Выполненная-задача.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.4.9.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.9.0\build\MaterialDesignThemes.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
