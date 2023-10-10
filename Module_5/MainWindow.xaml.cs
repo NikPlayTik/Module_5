@@ -57,7 +57,7 @@ namespace Module_5
 
                 if (selectedItem != null)
                 {
-                    // Проверяем, является ли задача уже выполненной
+                    // условие является ли задача уже выполненной
                     if (!selectedItem.StartsWith("☑️ "))
                     {
                         var result = MessageBox.Show("Выполнить задачу?", "Подтверждение", MessageBoxButton.YesNo, MessageBoxImage.Question);
